@@ -1,0 +1,31 @@
+<hr/>
+<div class="container" ng-controller="IEPController">
+    <div class="row">
+        <label>First Name</label> <input type="text" ng-model="studentDto.firstName" class="input-sm spacing"/>
+        <label>Last Name</label> <input type="text" ng-model="studentDto.lastName" class="input-sm spacing"/>
+        <label>School</label> <input type="text" ng-model="studentDto.school" class="input-sm spacing"/>
+        <label>District</label> <input type="text" ng-model="studentDto.district" class="input-sm spacing"/>
+        <label>Parent/ Guardian</label> <input type="text" ng-model="studentDto.parent" class="input-sm spacing"/>
+        <label>Date of Birth</label> <input type="text" ng-model="studentDto.dob" class="input-sm spacing"/>
+        <label>Grade</label> <input type="text" ng-model="studentDto.grade" class="input-sm spacing"/>
+        <label>Gender</label> <input type="text" ng-model="studentDto.gender" class="input-sm spacing"/>
+
+
+
+
+        <!--<label>Skills</label> <input type="text" ng-model="skills" ng-list class="input-sm custom-width spacing"-->
+        <!--placeholder="use comma to separate skills"/>-->
+        <button ng-click="saveStudent()" class="btn btn-sm btn-info">Save Student</button>
+    </div>
+    <hr/>
+    <div class="row">
+        <p>{{allStudents | json}}</p>
+    </div>
+    <hr/>
+    <!--<div class="row" ng-repeat="user in allUsers">-->
+    <!--<div class="">-->
+    <!--<h3>{{student.firstName + student.lastName}}</h3>-->
+    <!--<span ng-repeat="skill in user.skillDtos" class="spacing">{{skill.skillName}}</span>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>

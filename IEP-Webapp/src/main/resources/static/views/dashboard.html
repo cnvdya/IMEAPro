@@ -1,0 +1,140 @@
+<div data-ng-controller="IEPController">
+<div class="row">
+    <div class="col-sm-5">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Attendance </b></div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <td>Date</td>
+                        <td>04/03/2019</td>
+                    </tr>
+                    <tr>
+                        <td>Attendance</td>
+                        <td>08/11</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <div
+                        fusioncharts
+                        width="450"
+                        height="250"
+                        type="line"
+                        id="my-chart-id"
+                        datasource="{{linechartData}}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-5">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Goals VS Strategies </b></div>
+            <div class="panel-body">
+                <div
+                        fusioncharts
+                        width="550"
+                        height="350"
+                        type="heatmap"
+                        id="heatmap-chart-id"
+                        datasource="{{heatmapdata}}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Reminders/ Notes </b></div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <td>Call John's Parent at noon.</td>
+                    </tr>
+                    <tr>
+                        <td>Update assignment for words pronunciation and counting. </td>
+                    </tr>
+                    <tr>
+                        <td>Add assignment for yellow color identification. </td>
+                    </tr>
+                    <tr>
+                        <td>Emma's birthday. Ask students to sing birthday song. </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Performance Evaluation Report</b></div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div
+                                fusioncharts
+                                width="450"
+                                height="250"
+                                type="angulargauge"
+                                id="my-chart-id1"
+                                datasource="{{test1chartData}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div
+                                fusioncharts
+                                width="450"
+                                height="250"
+                                type="angulargauge"
+                                id="my-chart-id2"
+                                datasource="{{test2chartData}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div
+                                fusioncharts
+                                width="450"
+                                height="250"
+                                type="angulargauge"
+                                id="my-chart-id3"
+                                datasource="{{test3chartData}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>IEP Tasks Progress </b></div>
+            <div class="panel-body">
+                <div
+                    fusioncharts
+                    width="1400"
+                    height="500"
+                    type="gantt"
+                    id="my-ganttchart-id"
+                    datasource="{{ganttchartData}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

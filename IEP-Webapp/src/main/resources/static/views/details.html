@@ -1,0 +1,164 @@
+
+    <div class="panel-group" id="studentdetails" data-ng-controller="StudentController" ng-init="init()">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#studentdetails" href="#collapse1">Student Details</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse" ng-class="{'in': defaultPanel == 'studentDetail'}">
+                <div class="row">
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3">
+                        <h3>{{studentDto.firstName + " " + studentDto.lastName}}</h3>
+                    </div>
+                    <div class="col-sm-5" >
+                        <a href="#" class="btn btn-info btn-md alignment float-right" data-ng-click="updateStudent()">
+                            <span class="glyphicon glyphicon-pencil"></span> Edit
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td>District</td>
+                                <td>{{studentDto.district}}</td>
+                            </tr>
+                            <tr>
+                                <td>School</td>
+                                <td>{{studentDto.school}} </td>
+                            </tr>
+                            <tr>
+                                <td>Birthday</td>
+                                <td>{{studentDto.dob}}</td>
+                            </tr>
+                            <tr>
+                                <td>Primary Contact</td>
+                                <td>{{studentDto.guardians[0].guardianName}}  ( Ph: +1{{studentDto.guardians[0].contactNo}})</td>
+                            </tr>
+                            <tr>
+                                <td>Grade</td>
+                                <td>{{studentDto.grade}}</td>
+                            </tr>
+                            <tr>
+                                <td>Gender Identity</td>
+                                <td>{{studentDto.gender}}</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#studentdetails" href="#collapse2">Goals</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse" ng-class="{'in': defaultPanel == 'goalList'}">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <br>
+                        <br>
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr ng-repeat="goal in goals">
+                                <td>
+                                <div class="row">
+                                    <div class="col-sm-8"><a href="#" data-ng-click="getGoalById(goal.goalID)"><h3>{{goal.goalTitle}}</h3></a></div>
+                                    <div class="col-sm-4"><a href="#" data-ng-click="getGoalById(goal.goalID)">
+                                        <span class="glyphicon glyphicon-chevron-right float-right alignment"></span>
+                                    </a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12"><a href="#" data-ng-click="getGoalById(goal.goalID)">{{goal.description}}</a></div>
+                                </div>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-5" >
+                        <button type="button" class="btn btn-info btn-lg" data-ng-click="addGoal()">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            Add New Goal</button>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#studentdetails" href="#collapse3">IEP Details</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td>Last evaluation</td>
+                                <td><a href="#">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a></td>
+                            </tr>
+                            <tr>
+                                <td>Next evaluation</td>
+                                <td><a href="#">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a></td>
+                            </tr>
+                            <tr>
+                                <td>Current IEP start date</td>
+                                <td><a href="#">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a></td>
+                            </tr>
+                            <tr>
+                                <td>Next annual IEP</td>
+                                <td><a href="#">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a></td>
+                            </tr>
+                            <tr>
+                                <td>Original special ed entry date</td>
+                                <td><a href="#">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

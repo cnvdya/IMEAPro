@@ -1,0 +1,105 @@
+<div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                <h3>Add New Task</h3>
+                    <br>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form name="addtask" enctype="multipart/form-data"
+                          class="form-group" data-ng-submit="addNewTask()">
+
+                        <div class="row">
+                            <div class="col-sm-12 float-left">
+                                <label>Task Description</label></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                            <input type="text" class="form-control" name="taskName" data-ng-model="vm.task.taskDescription"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-12 float-left">
+                                <label>Objective</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <select class="form-control" ng-model="vm.selectedObjective" placeholder="Select Objective" style="height: 34px"
+                                        ng-options="objective.objectiveDescription for objective in vm.objectivesList">
+                                </select>
+
+                            </div>
+                        </div>
+
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-12 float-left">
+                                <label>Start Date</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" name="startdate" data-ng-model="vm.task.startDate"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-12 float-left">
+                                <label>Completion Date</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" name="enddate" data-ng-model="vm.task.completionDate"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-12 float-left">
+                                <label>Number of Evaluation Required</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" name="district" data-ng-model="vm.task.evaluationTotal"/>
+                            </div>
+                        </div>
+                        <br>
+
+
+                        <div class="row">
+                            <div class="col-sm-6" >
+                                <button type="submit" class="btn btn-info btn-lg"  style="width: 100px">Add</button>
+                            </div>
+
+                            <div class="col-sm-6 float-right" >
+                                <button type="button" class="btn btn-warning btn-lg float-right" data-ng-click="vm.dismiss()">
+                                    Cancel</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+</div>

@@ -1,0 +1,108 @@
+<div class="modal-content">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Add New Evaluation</h3>
+                <br>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form name="addevaluation" enctype="multipart/form-data"
+                      class="form-group" data-ng-submit="addNewEvaluation()">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Goal:</label></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label style="font-weight: 400">{{vm.goalData.goalTitle}}</label>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-12 float-left">
+                            <label>Select task for evaluation</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <select class="form-control" ng-model="vm.selectedTask" placeholder="Select Task" style="height: 34px"
+                                    ng-options="task.taskDescription for task in vm.tasksList">
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-12 float-left">
+                            <label>Evaluation Date</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="evaluationDate" data-ng-model="vm.evaluation.evaluationDate"/>
+                            <!--<input type="text" ng-model="date" jqdatepicker />-->
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-12 float-left">
+                            <label>Comments</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea rows="5" type="text" class="form-control" data-ng-model="vm.evaluation.comments"></textarea>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-12 float-left">
+                            <label>Strategy Used</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <select class="form-control" ng-model="vm.selectedStrategy" placeholder="Select Task" style="height: 34px"
+                                    ng-options="strategy for strategy in vm.strategies">
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col-sm-6" >
+                            <button type="submit" class="btn btn-info btn-lg" style="width: 100px">Add</button>
+                        </div>
+
+                        <div class="col-sm-6 float-right" >
+                            <button type="button" class="btn btn-warning btn-lg float-right" data-ng-click="vm.dismiss()">
+                                Cancel</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,65 @@
+<div class="sectionLight"  ng-controller="IEPController">
+
+    <div class="row">
+        <div class="col-4">
+            <h2>Students</h2>
+        </div>
+        <div class="col-8" >
+            <button type="button" class="btn btn-info btn-lg" data-ng-click="addStudent()">
+                <span class="glyphicon glyphicon-plus"></span>
+                Add New Student</button>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-3">
+                    <img data-ng-click="opendetails(studentID)" data={{studentID}} src="assets/girl2.png" style="width:150px">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--<button type="button" class="btn btn-danger btn-lg btnCenter" data-toggle="modal" data-target=".kf-modal-lg" >Kickflip</button>-->
+                            <label style="text-align: center">Ema Green</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+
+                    <img data-ng-click="opendetails(studentID)" data={{studentID}} src="assets/boy.png" style="width:150px">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--<button type="button" class="btn btn-danger btn-lg btnCenter" data-toggle="modal" data-target=".kf-modal-lg" >Kickflip</button>-->
+                            <label style="text-align: center" >John Smith</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img  data-ng-click="opendetails(studentID)" src="assets/girl.png" style="width:150px">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--<button type="button" class="btn btn-danger btn-lg btnCenter" data-toggle="modal" data-target=".flip-modal-md">360 Flip</button>-->
+                            <label style="text-align: center">Emily Richard</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img  src="assets/boy2.png" style="width:150px">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--<button type="button" class="btn btn-danger btn-lg btnCenter" data-toggle="modal" data-target=".bscrook-modal-sm">BS Crook</button>-->
+                            <label style="text-align: center">Tom Johnson</label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

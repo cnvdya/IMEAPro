@@ -1,0 +1,62 @@
+/*body{*/
+    /*background-color: #efefef;*/
+/*}*/
+.sectionLight{
+
+    background-color: #eceeef;
+    padding: 2em;
+}
+
+.sectionDark{
+    background-color: #cccccc;
+    padding:2rem;
+
+}
+span.spacing{
+    margin-right: 10px;
+}
+input.custom-width{
+    width: 200px;
+}
+input.spacing{
+    margin-right: 5px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.alignment
+{
+    margin-top:15px;
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    /*display:inline-block;*/
+    /*float:none;*/
+    /*!* reset the text-align *!*/
+    /*text-align:left;*/
+    /*!* inline-block space fix *!*/
+    /*margin-right:-4px;*/
+    text-align: center;
+    /*background-color: #ccc;*/
+    /*border: 1px solid #ddd;*/
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+md-progress-linear.md-default-theme .md-bar, md-progress-linear .md-bar{
+    background-color: #e83e8c;
+    height:20px;
+}
+
+md-progress-linear .md-container .md-bar {
+    height:20px;
+}

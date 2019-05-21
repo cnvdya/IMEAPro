@@ -1,0 +1,231 @@
+<div data-ng-controller="GoalController" data-ng-init="init()">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class ="row">
+                                <div class="col-sm-12">
+                                    <h4><b>{{goalData.goalTitle}}</b></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class ="row">
+                                <div class="col-sm-12">
+                                    {{goalData.description}}
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-sm-4">
+                        <div class ="row">
+                            <div class="col-sm-12" align="center">
+                                <img  ng-show="completed" src="assets/completedicon.png" style="width:50px; height: 50px">
+                                <img  ng-show="inprogress" src="assets/inprogressicon.png" style="width:50px; height: 50px">
+                                <img  ng-show="notStarted" src="assets/notstartedicon.png" style="width:50px; height: 50px">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12" align="center" ng-show="completed" >
+                                Completed
+                            </div>
+                            <div class="col-sm-12" align="center" ng-show="inprogress">
+                                In Progress
+                            </div>
+                            <div class="col-sm-12" align="center" ng-show="notStarted">
+                                Not Started
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12" align="center" ng-show="completed|| inprogress">
+                                {{percentage| number : 2}}% COMPLETE
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-info btn-md btn-block" data-ng-click="openAddEvaluationPopup()">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                New Evaluation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class ="row">
+                        <div class="col-sm-6">
+                            <div class = "row">
+                                <div class="col-sm-12 col-centered">
+                                    <h4><b>Total evaluations</b></h4>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <div class="col-sm-12 col-centered">
+                                    4
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class = "row">
+                                <div class = "col-sm-12 col-centered">
+                                    <h4><b>Last evaluation</b></h4>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <div class = "col-sm-12 col-centered">
+                                    4/2/2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <h4><b>Tasks to track</b></h4>
+                        </div>
+                        <div class="col-sm-1">
+                            <button type="button" class="btn btn-info btn-md  float-right" data-ng-click="openAddTaskPopup()">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                New Task</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr data-ng-repeat="task in tasks">
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <a href="#" data-ng-click="getTaskById(task.taskID)">{{task.taskDescription}}</a>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <md-progress-linear md-mode="determinate"
+                                                                    value="{{task.evaluationCompleted*100/task.evaluationTotal}}">
+                                                </md-progress-linear>
+                                            </div>
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class ="row">
+                        <div class="col-sm-12">
+                            <h4><b>Goal Details</b></h4>
+                        </div>
+                    </div>
+
+                    <div class ="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <td>Category</td>
+                                    <td>{{goalData.goalCategory}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date of initial instruction</td>
+                                    <td>{{goalData.initialInstructionDate}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Projected date of accomplishment</td>
+                                    <td>{{goalData.completionDate}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class ="row">
+                        <div class="col-sm-12">
+                            <h4><b>Instructional Strategies</b></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <td>Specific Stimuli</td>
+                                    <td><a href="#" data-ng-click="updateGoal()">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Attending Behavior</td>
+                                    <td><a href="#" data-ng-click="updateGoal()">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Prompts</td>
+                                    <td><a href="#" data-ng-click="updateGoal()">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Response Cue</td>
+                                    <td><a href="#" data-ng-click="updateGoal()">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Correction Procedures</td>
+                                    <td><a href="#" data-ng-click="updateGoal()">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Reinforcement</td>
+                                    <td><a href="#" data-ng-click="updateGoal()">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

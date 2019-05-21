@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/app/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lib/angular-toastr.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+
+</head>
+<body ng-app="iepTracker">
+
+<div class="container-fluid">
+<!--navbar begins-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">IMEAPRO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">Home <span class="sr-only">(current)</span></a><!--sr-only -> screen reader only -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/studentsview">Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Goals</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Others
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Search Student</a>
+                    <a class="dropdown-item" href="#">Review Performance</a>
+                    <a class="dropdown-item" href="#">Results</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--navbar ends-->
+
+
+<!--<a href="/test">view1</a>-->
+
+<!--<a href="/studentsview">view2</a>-->
+
+<data-ng-view></data-ng-view>
+
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/IEPController.js"></script>
+<script src="js/app/IEPService.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/angular-route.js"></script>
+<script type="text/javascript" src="js/lib/fusioncharts.js"></script>
+<script type="text/javascript" src="js/lib/angular-fusioncharts.min.js"></script>
+<script type="text/javascript" src="js/lib/fusioncharts.theme.fusion.js"></script>
+<script type="text/javascript" src="js/lib/fusioncharts.gantt.js"></script>
+<script type="text/javascript" src="js/lib/fusioncharts.powercharts.js"></script>
+<script type="text/javascript" src="js/lib/angular-toastr.tpls.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+
+
+
+</html>

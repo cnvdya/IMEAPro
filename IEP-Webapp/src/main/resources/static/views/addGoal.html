@@ -1,0 +1,226 @@
+
+<div class="sectionLight" data-ng-controller="GoalController" ng-init="init()">
+    <div class="row">
+        <div class="col-lg-3"></div>
+
+        <div class="col-lg-8">
+            <div class="container-new">
+                <div class="row">
+                    <div class="col-8">
+                        <h2>Add/Update Goal</h2><br>
+                    </div>
+                </div>
+
+                <form name="addgoal" enctype="multipart/form-data"
+                      class="form-group" data-ng-submit="addnewgoal()">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Goal Title</label></div>
+                    </div>
+
+                    <div class="row"><div class="col-sm-8">
+                        <input type="text" class="form-control" name="firstName" data-ng-model="goal.goalTitle"/>
+                    </div></div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label>Description</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <textarea rows="5" type="text" class="form-control" data-ng-model="goal.description"></textarea>
+                            <!--<input type="text" class="form-control" name="lastName" data-ng-model="studentDto.lastName"/>-->
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label>Category</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="district" data-ng-model="goal.goalCategory"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label>Date of initial instruction</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="parent" data-ng-model="goal.initialInstructionDate"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label>Projected date of accomplishment</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8" align="center">
+                            <input type="text" placeholder="mm/dd/yyyy" class="form-control" name="dob" data-ng-model="goal.completionDate"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label>Short term objectives</label>
+                        </div>
+                    </div>
+
+
+                    <div data-ng-repeat="objective in goal.objectiveDtoList">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <button type="button" ng-show="showAddObjective(objective)" ng-click="addNewObjective()"
+                                        class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
+
+                                <button type="button" ng-click="removeNewObjective()"
+                                        class="btn btn-info btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" ng-model="objective.objectiveDescription"
+                                       name="" placeholder="Enter short term objective" >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" ng-model="objective.startDate" name="" placeholder="Expected Start Date" >
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" ng-model="objective.completionDate" name="" placeholder="Expected Date for Completion" >
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Specific Stimuli</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.specificStimuli"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Attending Behavior</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.attendingBehavior"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Prompts</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.prompts"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Response Cue</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.responseCue"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Response Prompts</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.responsePrompts"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Correction Procedures</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.correctionProcedures"/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <label>Reinforcement</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="gender" data-ng-model="goal.reinforcement"/>
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col-sm-8" >
+                            <button type="submit" class="btn btn-info btn-lg">
+                                Save</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+</div>
+</div>
+
+</div>

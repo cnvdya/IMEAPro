@@ -1,0 +1,142 @@
+<div data-ng-controller="TaskDetailController" data-ng-init="init()">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class ="row">
+                                <div class="col-sm-12">
+                                    <h4><b>Task Description:</b></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class ="row">
+                                <div class="col-sm-12">
+                                    {{taskData.taskDescription}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class ="row">
+                                <div class="col-sm-12" align="center">
+                                    <img  ng-show="completed" src="assets/completedicon.png" style="width:50px; height: 50px">
+                                    <img  ng-show="inprogress" src="assets/inprogressicon.png" style="width:50px; height: 50px">
+                                    <img  ng-show="notStarted" src="assets/notstartedicon.png" style="width:50px; height: 50px">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12" align="center" ng-show="completed" >
+                                    Completed
+                                </div>
+                                <div class="col-sm-12" align="center" ng-show="inprogress">
+                                    In Progress
+                                </div>
+                                <div class="col-sm-12" align="center" ng-show="notStarted">
+                                    Not Started
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12" align="center" ng-show="completed|| inprogress">
+                                    {{percentage| number : 2}}% COMPLETE
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <h4><b>Task Details</b></h4>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>Scheduled completion date:</td>
+                                        <td>{{taskData.completionDate}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual completion date:</td>
+                                        <td>{{taskData.actualCompetionDate}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status</td>
+                                        <td ng-show="taskData.isCompleted=='1'">Complete</td>
+                                        <td ng-show="taskData.inProgress=='1'">In Progress</td>
+                                        <td ng-show="taskData.notStarted=='1'">Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total evaluation required</td>
+                                        <td>{{taskData.evaluationTotal}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Evaluation completed</td>
+                                        <td>{{taskData.evaluationCompleted}}</td>
+                                    </tr>
+                                    </tbody>
+                                <tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class ="row">
+                        <div class="col-sm-12">
+                            <h4><b>Evaluation Details</b></h4>
+                        </div>
+                    </div>
+
+                    <div class ="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <table class="table table-bordered">
+
+                                <thead>
+                                <tr class="active">
+                                    <th>Date</th>
+                                    <th>Feedback</th>
+                                    <th>Feedback Sentiment</th>
+                                    <th>Strategy Used</th>
+                                    <th>Result</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr data-ng-repeat="evaluation in evaluations"
+                                    ng-class="{'success': evaluation.passed == '1', 'danger': evaluation.passed == '0'}">
+                                    <td>{{evaluation.evaluationDate}}</td>
+                                    <td>{{evaluation.comments}}</td>
+                                    <td>{{evaluation.averageScore}}</td>
+                                    <td>{{evaluation.strategyUsed}}</td>
+                                    <td ng-show="evaluation.passed=='1'">Complete</td>
+                                    <td ng-show="evaluation.passed=='0'">Needs Improvement</td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

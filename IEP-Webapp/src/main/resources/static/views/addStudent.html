@@ -1,0 +1,209 @@
+
+
+    <div class="sectionLight" data-ng-controller="StudentController" ng-init="init()">
+        <div class="row">
+            <div class="col-lg-3"></div>
+
+            <div class="col-lg-8">
+                <div class="container-new">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2>Add New Student</h2><br>
+                        </div>
+                    </div>
+
+
+                    <form name="addnewstudent" enctype="multipart/form-data"
+                          class="form-group" data-ng-submit="addnewstudent()">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label>First Name</label></div>
+                        </div>
+
+                        <div class="row"><div class="col-sm-8">
+                            <input type="text" class="form-control" name="firstName" data-ng-model="studentDto.firstName"/>
+                        </div></div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label>Last Name</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="lastName" data-ng-model="studentDto.lastName"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label>School</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="school" data-ng-model="studentDto.school"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label>District</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="district" data-ng-model="studentDto.district"/>
+                            </div>
+                        </div>
+                        <br>
+
+
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label>Birth Date</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8" align="center">
+                                <input type="text" placeholder="mm/dd/yyyy" class="form-control" name="dob" data-ng-model="studentDto.dob"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label>Grade</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="grade" data-ng-model="studentDto.grade"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8" >
+                                <label>Gender</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="gender" data-ng-model="studentDto.gender"/>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label>Parent/Guardian</label>
+                            </div>
+                        </div>
+
+
+                        <div data-ng-repeat="guardian in studentDto.guardians">
+
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <button type="button" ng-show="showAddObjective(guardian)" ng-click="addNewObjective()"
+                                            class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
+
+                                    <button type="button" ng-click="removeNewObjective()"
+                                            class="btn btn-info btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Name" name="parent" data-ng-model="guardian.guardianName"/>
+                                </div>
+
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <label>
+                                        <input type="checkbox" data-ng-model="guardian.primaryContact">
+                                        Primary Contact
+                                    </label>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" placeholder="Relationship e.g. Mother/Father"
+                                           name="relation" data-ng-model="guardian.relation"/>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="contact"
+                                           placeholder="contact number" data-ng-model="guardian.contactNo"/>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <!--<br>-->
+
+                        <!--<div class="row">-->
+
+                            <!--<div class="col-sm-6">-->
+                                <!--<input type="text" class="form-control" placeholder="Name 2" name="parent" data-ng-model="studentDto.guardian.name"/>-->
+                            <!--</div>-->
+
+                            <!--<div class="col-sm-2">-->
+                                <!--<label>-->
+                                    <!--<input type="checkbox" data-ng-model="studentDto.guardian.isPrimary">-->
+                                    <!--Primary Contact-->
+                                <!--</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="row">-->
+                            <!--<div class="col-sm-4">-->
+                                <!--<input type="text" class="form-control" placeholder="e.g. Mother/Father" name="relation" data-ng-model="studentDto.guardian.relation"/>-->
+                            <!--</div>-->
+
+                            <!--<div class="col-sm-4">-->
+                                <!--<input type="text" class="form-control" name="contact" placeholder="contact number" data-ng-model="studentDto.guardian.contact"/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-8" >
+                                <button type="button" class="btn btn-info btn-lg" data-ng-click="saveStudent()">
+                                    Save Student</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+        </div>
+    </div>
+
+</div>
