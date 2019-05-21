@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskActivity"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Detail:"
+        android:textColor="#427c8e"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/task_name"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/inprogressicon" />
+
+    <View
+        android:id="@+id/line_id"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#8F8C8C"
+        android:layout_below="@+id/task_name"
+        android:layout_marginRight="70dp"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:text="Status here"
+        android:layout_marginBottom="10dp"
+        android:layout_alignRight="@+id/imageView1"
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_alignTop="@+id/status"
+        android:layout_alignRight="@+id/status"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="percent complete"
+        android:textSize="10dp" />
+
+
+    <TextView
+        android:id="@+id/task_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/task_name"
+        android:text="gfe fjhfr fdjnkf dvjnds cdsnkcjfd kjd  dnkdj"
+        android:textColor="#427c8e"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="70dp"/>
+
+    <Button
+        android:id="@+id/feedback_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Feedback"
+        android:layout_below="@+id/line2_id"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btnshape"
+        android:onClick="addFeedback"/>
+
+    <View
+        android:id="@+id/line2_id"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#8F8C8C"
+        android:layout_below="@+id/percentage"/>
+
+    <View
+        android:id="@+id/line3_id"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#8F8C8C"
+        android:layout_below="@+id/feedback_btn"/>
+
+
+
+    <TextView
+        android:id="@+id/feedback_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line3_id"
+        android:text="Feedback Evaluations:"
+        android:textColor="#427c8e"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:id="@+id/evaluationDtoList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"></ListView>
+
+</RelativeLayout>

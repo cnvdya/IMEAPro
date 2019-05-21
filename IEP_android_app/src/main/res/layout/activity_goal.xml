@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".GoalActivity" >
+
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/student_girl"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ema Green"
+        android:textSize="20dp"
+        android:layout_below="@id/profile_pic"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#427c8e"/>
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birth date: 10/12/2015"
+        android:layout_below="@id/student_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primary Contact: Emily Green"
+        android:layout_below="@id/birthday"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/contactno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone: +1(567)489-8374"
+        android:layout_below="@id/contact"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grade: I"
+        android:layout_below="@id/contactno"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender Identity: Female"
+        android:layout_below="@id/grade"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:textColor="@color/colorText"/>
+
+
+    <TextView
+        android:id="@+id/goal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goals List"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/gender"
+        android:textStyle="bold"
+        android:textColor="#427c8e"/>
+
+    <ListView
+        android:id="@+id/goalDtoList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goal_title"
+        android:layout_centerHorizontal="true"></ListView>
+
+</RelativeLayout>

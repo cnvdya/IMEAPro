@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/goal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goal 1"
+        android:textColor="#427c8e"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/goal_name"
+        android:layout_alignBaseline="@+id/goal_name"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_chevron_right_black_24dp" />
+
+    <TextView
+        android:id="@+id/goal_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goal_name"
+        android:text="gfe fjhfr fdjnkf dvjnds cdsnkcjfd kjd  dnkdj"
+        android:textColor="#427c8e"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+
+
+<!--<TextView-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:id="@+id/cardNumber"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Card Number:"/>-->
+
+<!--<TextView-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:id="@+id/cardNumberVal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="30dp"-->
+    <!--android:layout_toRightOf="@+id/cardNumber"-->
+    <!--android:text="Card Number"/>-->
+
+<!--<TextView-->
+    <!--android:id="@+id/cardBalance"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/cardNumber"-->
+    <!--android:layout_alignLeft="@+id/cardNumber"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:text="Balance"/>-->
+<!--<TextView-->
+    <!--android:id="@+id/cardBalanceVal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/cardNumber"-->
+    <!--android:layout_alignLeft="@+id/cardNumberVal"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:text="$0.00"-->
+    <!--android:textColor="@color/orderList" />-->
+
+
+
+<!--</RelativeLayout>-->
+

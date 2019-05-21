@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">IMEA PRO</string>
+    <string-array name="task_list">
+        <item>- - - Select - - -</item>
+        <item>Learn to speak page 1 words with clarity</item>
+        <item>Learn words of page 2</item>
+        <item>Learn to speak whole sentence using words</item>
+    </string-array>
+    <string-array name="strategy_list">
+        <item>- - - Select - - -</item>
+        <item>Team Activity</item>
+        <item>Smart Interactive Session</item>
+        <item>Reading</item>
+        <item>Audio aids</item>
+        <item>Visual aids</item>
+        <item>Audio and visual aids</item>
+    </string-array>
+
+
+
+</resources>

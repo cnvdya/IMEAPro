@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackActivity"
+    android:layout_margin="25dp">
+
+    <TextView
+        android:id="@+id/goal_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goal:"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#427c8e"
+        />
+
+    <TextView
+        android:id="@+id/goal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vocal Proficiency"
+        android:layout_below="@+id/goal_heading"
+        android:textSize="16dp"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/task_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Task for Feedback"
+        android:layout_below="@id/goal_title"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#427c8e"/>
+
+    <Spinner
+        android:id="@+id/task_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_heading"
+        android:entries="@array/task_list"
+        android:layout_marginTop="10dp"></Spinner>
+
+    <TextView
+        android:id="@+id/date_heading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Date"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/task_spinner"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#427c8e"/>
+
+    <EditText
+        android:id="@+id/date_edttxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MM/DD/YYYY"
+        android:layout_marginLeft="80dp"
+        android:layout_alignBaseline="@id/date_heading"
+        android:background="@drawable/edittext_border_color"
+        android:padding="5dp"
+        android:onClick="showCalendar"/>
+
+
+    <TextView
+        android:id="@+id/comment_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback comments:"
+        android:layout_below="@id/date_edttxt"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#427c8e"/>
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/comment_heading"
+        android:background="@drawable/edittext_border_color"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/strategy_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Strategy Used:"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/comment"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#427c8e"/>
+
+    <Spinner
+        android:id="@+id/strategy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/strategy_heading"
+        android:entries="@array/strategy_list"
+        android:layout_marginTop="10dp"></Spinner>
+
+    <Button
+        android:id="@+id/feedback_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Feedback"
+        android:layout_below="@+id/strategy"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btnshape"
+        android:onClick="submitFeedback"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
