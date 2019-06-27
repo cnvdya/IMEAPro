@@ -8,13 +8,13 @@ Intelligent Monitoring and Evaluation App for Special Children
 ![alt text](screenshots/Picture2.png "this is the dashboard page")
 
 ## Login window
-![alt text](screenshots/login.JPG "this is login window")
+![alt text](screenshots/add-goal.PNG "this is add goals page")
 
-## Home  page after login
-![alt text](screenshots/viewlist.JPG "this is the landing page after login")
+## View/Add tasks
+![alt text](screenshots/Picture3.png "this is the view/add tasks page")
 
-## Upload screen
-![alt text](screenshots/upload.JPG "this is the upload window")
+## Android-app view goals screen
+![alt text](screenshots/android-Picture2.png "this is the view goals screen")
 
-## Update screen
-![alt text](screenshots/update-delete.JPG "this is the update delete window")
+## Android-app view tasks screen
+![alt text](screenshots/android-Picture3.png "this is the view tasks screen")
