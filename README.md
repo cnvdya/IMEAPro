@@ -1,5 +1,8 @@
 # IMEAPro
 Intelligent Monitoring and Evaluation App for Special Children
+* Application for monitoring and Logging IEPs
+* Behavior and Feedback Analysis
+* Conversational interface with Alexa and Deeplens 
 
 ## Home Page
 ![alt text](screenshots/Picture1.png "this is the home page")
