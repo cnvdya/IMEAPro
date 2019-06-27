@@ -7,8 +7,8 @@ Intelligent Monitoring and Evaluation App for Special Children
 ## Dashboard Page
 ![alt text](screenshots/Picture2.png "this is the dashboard page")
 
-## Login window
-![alt text](screenshots/add-goal.PNG "this is add goals page")
+## Add goals page
+![alt text](screenshots/add-goal.png "this is add goals page")
 
 ## View/Add tasks
 ![alt text](screenshots/Picture3.png "this is the view/add tasks page")
